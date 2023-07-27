@@ -36,7 +36,7 @@ public class CssSelectors extends BaseTest {
         actions.moveToElement(inspireText).perform();
     }
 
-   // @Test
+    @Test
     public void cssSelector2(){
         driver.findElement(By.cssSelector("li[class='menu_user_login']")).click();
 
