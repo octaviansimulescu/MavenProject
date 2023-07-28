@@ -7,6 +7,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class BaseTest {
 
 
@@ -16,6 +18,7 @@ public class BaseTest {
     public void setup(){
 
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//caz global
         driver.manage().window().maximize();//maximizeaza fereastra browserului
         driver.get("https://keybooks.ro/");
 
